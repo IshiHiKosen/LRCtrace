@@ -67,7 +67,7 @@
 
         // 虫さんのお家
         const canvas2 = document.getElementById("canvas2");
-        canvas2.width = 1000; canvas2,height  = 500;
+        canvas2.width = 1000; canvas2,height  = 1000;
         ctx2 = canvas2.getContext("2d");
 
     }
@@ -135,15 +135,15 @@
 
         // 前左右に応じて、虫さんに角度をプラス
         if (status == 1){
-            musiAng += -0.01; // 数値は、角度の変化の割合
+            musiAng += -0.1; // 数値は、角度の変化の割合
         }
         else if (status == 2){
-            musiAng += +0.01;
+            musiAng += +0.1;
         }
 
-        // 虫さんに座標をプラス
-        musiX += musiV *Math.cos(musiAng +Math.PI/2);
-        musiY += musiV *Math.sin(musiAng +Math.PI/2);
+        // 虫さんに座標をプラス。上がマイナスのようだ。
+        musiX -= musiV *Math.cos(musiAng +Math.PI/2);
+        musiY -= musiV *Math.sin(musiAng +Math.PI/2);
         
 
 
