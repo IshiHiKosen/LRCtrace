@@ -51,11 +51,11 @@
         canvas.width = size; canvas.height = size;
         ctx = canvas.getContext("2d");
         labelContainer = document.getElementById("label-container");
-        for (let i = 0; i < maxPredictions; i++) { // and class labels
-            labelContainer.appendChild(document.createElement("div"));
-        }
+        //for (let i = 0; i < maxPredictions; i++) { // and class labels
+        //    labelContainer.appendChild(document.createElement("div"));
+        //}
 
-        labelContainer.appendChild(document.createElement("div"));//もう一行追加
+        //labelContainer.appendChild(document.createElement("div"));//もう一行追加
 
 
     }
@@ -77,11 +77,11 @@
         // Prediction 2: run input through teachable machine classification model
         const prediction = await model.predict(posenetOutput);
         
-        for (let i = 0; i < maxPredictions; i++) {
-            const classPrediction =
-                prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-            labelContainer.childNodes[i].innerHTML = classPrediction;
-        }
+        //for (let i = 0; i < maxPredictions; i++) {
+        //    const classPrediction =
+        //        prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+        //    labelContainer.childNodes[i].innerHTML = classPrediction;
+        //}
         
         //-----
         // 確率が1.00になった時点で、前左右を切り替える(有効数字3桁なので、0.995以上になったらということ)
@@ -97,7 +97,7 @@
         else if (prediction[2].probability.toFixed(2) == 1.00){
             status = 2;
         }
-        labelContainer.childNodes[3].innerHTML = status;
+        labelContainer.innerHTML = status;
 
 
 
