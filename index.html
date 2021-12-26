@@ -128,7 +128,7 @@
         ctx2.arc(musiX-5, musiY, 1, 0, 2*Math.PI, true);
         ctx2.arc(musiX+5, musiY, 1, 0, 2*Math.PI, true);
 
-        ctx2.rotate(musiAng);// 虫さんの角度
+        ctx2.rotate(musiAng +Math.PI/2);// 虫さんの角度
 
         ctx2.stroke();
         ctx2.restore();// 描画状態を最初の状態に戻す(描かれるわけではない)
