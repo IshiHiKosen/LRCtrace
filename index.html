@@ -93,16 +93,20 @@
         // 前
         if (prediction[0].probability.toFixed(2) == 1.00 ){
             status = 0;
+            labelContainer.innerHTML = "        ↑"
         }
         // 右
         else if (prediction[1].probability.toFixed(2) == 1.00){
             status = 1;
+            labelContainer.innerHTML = "        →"
         }
         // 左
         else if (prediction[2].probability.toFixed(2) == 1.00){
             status = 2;
+            labelContainer.innerHTML = "        ←"
         }
-        labelContainer.innerHTML = status;
+
+
 
 
 
