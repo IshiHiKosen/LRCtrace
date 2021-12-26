@@ -70,19 +70,6 @@
                 prediction[i].className + ": " + prediction[i].probability.toFixed(2);
             labelContainer.childNodes[i].innerHTML = classPrediction;
         }
-        
-        //-----
-        let c = canvas.getContext('2d');
-
-        // パスの開始
-        c.beginPath();
-        // 起点
-        c.moveTo(500, 1000);
-        // 終点
-        c.lineTo(2500, 1000);
-        // 描画
-        c.stroke();
-        //-----
 
         // finally draw the poses
         drawPose(pose);
