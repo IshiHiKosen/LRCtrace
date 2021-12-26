@@ -129,22 +129,29 @@
         ctx2.arc(musiX+5, musiY, 1, 0, 2*Math.PI, true);
 
         ctx2.translate(musiX, musiY);// 回転中心を虫の原点にする
-        ctx2.rotate(musiAng);// 虫さんの角度
+        
+        // 虫さんの角度
+        if (status == 1){
+            ctx2.rotate(+Math.PI/4);
+        }
+        else if (status == 2){
+            ctx2.rotate(-Math.PI/4);
+        }
 
         ctx2.stroke();
         ctx2.restore();
 
         // 前左右に応じて、虫さんに角度をプラス
-        if (status == 1){
-            musiAng += -0.01; // 数値は、角度の変化の割合
-        }
-        else if (status == 2){
-            musiAng += +0.01;
-        }
+        //if (status == 1){
+        //    musiAng += -0.01; // 数値は、角度の変化の割合
+        //}
+        //else if (status == 2){
+        //    musiAng += +0.01;
+        //}
 
         // 虫さんに座標をプラス。上がマイナスのようだ。
-        musiX -= musiV *Math.cos(musiAng +Math.PI/2);
-        musiY -= musiV *Math.sin(musiAng +Math.PI/2);
+        //musiX -= musiV *Math.cos(musiAng +Math.PI/2);
+        //musiY -= musiV *Math.sin(musiAng +Math.PI/2);
         
 
 
