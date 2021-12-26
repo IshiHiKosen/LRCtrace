@@ -119,7 +119,6 @@
 
         // 虫
         // リセット
-        ctx2.save();
         ctx2.beginPath();
         ctx2.clearRect( 0, 0, 1000, 500 );//全部消す
         // 虫さんを描画
@@ -127,7 +126,7 @@
         ctx2.arc(musiX-5, musiY, 1, 0, 2*Math.PI, true);
         ctx2.arc(musiX+5, musiY, 1, 0, 2*Math.PI, true);
 
-        ctx2.translate(musiX, musiY);// 回転中心を虫の原点にする
+        //ctx2.translate(musiX, musiY);// 回転中心を虫の原点にする
         
         // 虫さんの角度
         if (status == 1){
@@ -138,7 +137,6 @@
         }
 
         ctx2.stroke();
-        ctx2.restore();
 
         // 前左右に応じて、虫さんに角度をプラス
         //if (status == 1){
