@@ -48,6 +48,21 @@
         for (let i = 0; i < maxPredictions; i++) { // and class labels
             labelContainer.appendChild(document.createElement("div"));
         }
+
+
+        //-----
+        let canvas = document.getElementById('canvas');
+        let c = canvas.getContext('2d');
+
+        // パスの開始
+        c.beginPath();
+        // 起点
+        c.moveTo(500, 1000);
+        // 終点
+        c.lineTo(2500, 1000);
+        // 描画
+        c.stroke();
+        //-----
     }
 
     async function loop(timestamp) {
@@ -85,17 +100,21 @@
         }
     }
 
-    let canvas = document.getElementById('canvas');
-    let c = canvas.getContext('2d');
+    function path(){
 
-    // パスの開始
-    c.beginPath();
-    // 起点
-    c.moveTo(500, 1000);
-    // 終点
-    c.lineTo(2500, 1000);
-    // 描画
-    c.stroke();
+        let canvas = document.getElementById('canvas');
+        let c = canvas.getContext('2d');
+
+        // パスの開始
+        c.beginPath();
+        // 起点
+        c.moveTo(500, 1000);
+        // 終点
+        c.lineTo(2500, 1000);
+        // 描画
+        c.stroke();
+
+    }
 
 </script>
 
