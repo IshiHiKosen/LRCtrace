@@ -50,19 +50,6 @@
         }
 
 
-        //-----
-        let canvas = document.getElementById('canvas');
-        let c = canvas.getContext('2d');
-
-        // パスの開始
-        c.beginPath();
-        // 起点
-        c.moveTo(500, 1000);
-        // 終点
-        c.lineTo(2500, 1000);
-        // 描画
-        c.stroke();
-        //-----
     }
 
     async function loop(timestamp) {
@@ -84,6 +71,20 @@
             labelContainer.childNodes[i].innerHTML = classPrediction;
         }
 
+        //-----
+        let canvas = document.getElementById('canvas');
+        let c = canvas.getContext('2d');
+
+        // パスの開始
+        c.beginPath();
+        // 起点
+        c.moveTo(500, 1000);
+        // 終点
+        c.lineTo(2500, 1000);
+        // 描画
+        c.stroke();
+        //-----
+
         // finally draw the poses
         drawPose(pose);
     }
@@ -100,21 +101,7 @@
         }
     }
 
-    function path(){
 
-        let canvas = document.getElementById('canvas');
-        let c = canvas.getContext('2d');
-
-        // パスの開始
-        c.beginPath();
-        // 起点
-        c.moveTo(500, 1000);
-        // 終点
-        c.lineTo(2500, 1000);
-        // 描画
-        c.stroke();
-
-    }
 
 </script>
 
